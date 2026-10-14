@@ -69,6 +69,14 @@ cmake --build build --target test-mtmd-impl -j 8
 
 Full output of both runs (on master `318a471`): `expected/unit-test-master-plus-test.txt` and `expected/unit-test-with-fix.txt`.
 
+The expected positions written in the test come from `positions/test_expected_positions.py`.
+It builds the model from its config only (no weights are loaded) and prints the positions that `get_rope_index`
+gives to the two small layouts used in the test. Its output is in `positions/test_expected_positions.out`:
+
+```sh
+python3 positions/test_expected_positions.py <MiniCPM-V-4.7-1B folder> --no-nl
+```
+
 ### 2. End to end (needs the 21 GB model and about 25 GB of GPU memory)
 
 Model files: `MiniCPM-V-4_7-35B-A3B-Q4_K_M.gguf` and `mmproj-model-f16-4x.gguf`,
@@ -161,6 +169,6 @@ With only the text start changed: 3/18. With only the marker change: 15/18.
 | `reference/` | answers from the official deployment |
 | `expected/` | our answers, reports and unit test output, before and after the fix |
 | `patches/` | the full change, and the same change split into test only + fix |
-| `positions/` | debug patch and scripts for the token-by-token check |
+| `positions/` | debug patch and scripts for the token-by-token check, and the script that makes the test's expected positions |
 
 Every result above comes from running the steps on this page.

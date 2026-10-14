@@ -1,0 +1,18 @@
+// layout ov 2x5 (h x w), grid 2x2 (rows x cols) of 2x7 slices
+// <image> at index 5: (5, 4, 4), first text after the image: (20, 20, 20)
+// image chunk (76 tokens), [T, H, W]:
+    {5,5,5}, {5,5,8}, {5,5,11}, {5,5,15}, {5,5,18}, {5,8,5}, {5,8,8}, {5,8,11},  // ov ov ov ov ov ov ov ov
+    {5,8,15}, {5,8,18}, {5,9,19}, {5,5,5}, {5,5,5}, {5,5,6}, {5,5,7}, {5,5,8},  // ov ov </image> <slice> slice slice slice slice
+    {5,5,9}, {5,5,10}, {5,5,11}, {5,6,5}, {5,6,6}, {5,6,7}, {5,6,8}, {5,6,9},  // slice slice slice slice slice slice slice slice
+    {5,6,10}, {5,6,11}, {5,6,11}, {5,5,12}, {5,5,12}, {5,5,13}, {5,5,14}, {5,5,15},  // slice slice </slice> <slice> slice slice slice slice
+    {5,5,16}, {5,5,17}, {5,5,18}, {5,6,12}, {5,6,13}, {5,6,14}, {5,6,15}, {5,6,16},  // slice slice slice slice slice slice slice slice
+    {5,6,17}, {5,6,18}, {5,6,18}, {5,6,19}, {5,7,5}, {5,7,5}, {5,7,6}, {5,7,7},  // slice slice </slice> \n <slice> slice slice slice
+    {5,7,8}, {5,7,9}, {5,7,10}, {5,7,11}, {5,8,5}, {5,8,6}, {5,8,7}, {5,8,8},  // slice slice slice slice slice slice slice slice
+    {5,8,9}, {5,8,10}, {5,8,11}, {5,8,11}, {5,7,12}, {5,7,12}, {5,7,13}, {5,7,14},  // slice slice slice </slice> <slice> slice slice slice
+    {5,7,15}, {5,7,16}, {5,7,17}, {5,7,18}, {5,8,12}, {5,8,13}, {5,8,14}, {5,8,15},  // slice slice slice slice slice slice slice slice
+    {5,8,16}, {5,8,17}, {5,8,18}, {5,8,18},  // slice slice slice </slice>
+// layout ov 3x4 (h x w), grid 0x0 (rows x cols) of 0x0 slices
+// <image> at index 5: (5, 4, 4), first text after the image: (10, 10, 10)
+// image chunk (13 tokens), [T, H, W]:
+    {5,5,5}, {5,5,6}, {5,5,7}, {5,5,8}, {5,6,5}, {5,6,6}, {5,6,7}, {5,6,8},  // ov ov ov ov ov ov ov ov
+    {5,7,5}, {5,7,6}, {5,7,7}, {5,7,8}, {5,8,9},  // ov ov ov ov </image>
