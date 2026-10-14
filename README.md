@@ -7,7 +7,7 @@ MiniCPM-V 4.7 is an image and text model from OpenBMB. llama.cpp supports it sin
 
 Ask the model where something is on a screenshot, for example "give the box of the Save button".
 With llama.cpp the answer is often placed too low.
-The same model served by the official code (Hugging Face transformers, or vLLM) does not show this.
+The official demo of the same model (Hugging Face Space `openbmb/MiniCPM-V-4.7-Demo`) does not show this.
 
 ## Why
 
