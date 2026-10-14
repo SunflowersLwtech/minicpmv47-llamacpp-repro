@@ -1,0 +1,39 @@
+diff --git a/src/llama-graph.cpp b/src/llama-graph.cpp
+index f69fe63..12c4e9e 100644
+--- a/src/llama-graph.cpp
++++ b/src/llama-graph.cpp
+@@ -172,8 +172,26 @@ void llm_graph_input_pos::set_input(const llama_ubatch * ubatch) {
+     if (ubatch->pos && pos) {
+         const int64_t n_tokens = ubatch->n_tokens;
+ 
++        // [debug, local only] dump the final positions fed to RoPE when LLAMA_DUMP_POS=<file> is set
++        auto dump_pos = [&](const llama_pos * data) {
++            static FILE * f = nullptr;
++            const char * path = getenv("LLAMA_DUMP_POS");
++            if (!path) { return; }
++            if (!f) { f = fopen(path, "w"); }
++            if (!f) { return; }
++            for (int64_t i = 0; i < n_tokens; ++i) {
++                const bool is_embd = ubatch->is_mixed() ? ubatch->type[i] != 0 : (ubatch->token == nullptr);
++                fprintf(f, "%d %d", ubatch->token && !is_embd ? (int) ubatch->token[i] : -1, (int) is_embd);
++                for (int64_t s = 0; s < (int64_t) n_pos_per_embd; ++s) {
++                    fprintf(f, " %d", (int) data[s*n_tokens + i]);
++                }
++                fprintf(f, "\n");
++            }
++            fflush(f);
++        };
+         const bool has_embd = ubatch->is_mixed() || ubatch->token == nullptr;
+         if (rope_section_order == LLAMA_ROPE_SECTION_ORDER_TYXZ || !has_embd) {
++            dump_pos(ubatch->pos);
+             ggml_backend_tensor_set(pos, ubatch->pos, 0, n_tokens*n_pos_per_embd*ggml_element_size(pos));
+             return;
+         }
+@@ -198,6 +216,7 @@ void llm_graph_input_pos::set_input(const llama_ubatch * ubatch) {
+                 pos_data[s*n_tokens + i] = ubatch->pos[slot*n_tokens + i];
+             }
+         }
++        dump_pos(pos_data.data());
+         ggml_backend_tensor_set(pos, pos_data.data(), 0, pos_data.size()*ggml_element_size(pos));
+     }
+ }

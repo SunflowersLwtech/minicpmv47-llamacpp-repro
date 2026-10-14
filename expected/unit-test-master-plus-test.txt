@@ -1,0 +1,53 @@
+test_image_preprocessor_lfm2
+test_image_preprocessor_lfm2 (5 assertion(s))                                   [PASS]
+test_temporal_merge_grouping
+test_temporal_merge_grouping (24 assertion(s))                                  [PASS]
+test_decoder_pos_minicpmv4_7
+ASSERT EQUAL FAILED : overview 5x2, 2x2 slices of 7x2: T, H, W of token 10
+  expected: 5, 9, 19
+  actual  : 7, 7, 7
+ASSERT EQUAL FAILED : overview 5x2, 2x2 slices of 7x2: T, H, W of token 11
+  expected: 5, 5, 5
+  actual  : 8, 8, 8
+ASSERT EQUAL FAILED : overview 5x2, 2x2 slices of 7x2: T, H, W of token 26
+  expected: 5, 6, 11
+  actual  : 10, 10, 10
+ASSERT EQUAL FAILED : overview 5x2, 2x2 slices of 7x2: T, H, W of token 27
+  expected: 5, 5, 12
+  actual  : 11, 11, 11
+ASSERT EQUAL FAILED : overview 5x2, 2x2 slices of 7x2: T, H, W of token 42
+  expected: 5, 6, 18
+  actual  : 13, 13, 13
+ASSERT EQUAL FAILED : overview 5x2, 2x2 slices of 7x2: T, H, W of token 43
+  expected: 5, 6, 19
+  actual  : 14, 14, 14
+ASSERT EQUAL FAILED : overview 5x2, 2x2 slices of 7x2: T, H, W of token 44
+  expected: 5, 7, 5
+  actual  : 15, 15, 15
+ASSERT EQUAL FAILED : overview 5x2, 2x2 slices of 7x2: T, H, W of token 59
+  expected: 5, 8, 11
+  actual  : 17, 17, 17
+ASSERT EQUAL FAILED : overview 5x2, 2x2 slices of 7x2: T, H, W of token 60
+  expected: 5, 7, 12
+  actual  : 18, 18, 18
+ASSERT EQUAL FAILED : overview 5x2, 2x2 slices of 7x2: T, H, W of token 75
+  expected: 5, 8, 18
+  actual  : 20, 20, 20
+ASSERT EQUAL FAILED : overview 5x2, 2x2 slices of 7x2: position of the text after the image
+  expected: 20
+  actual  : 21
+ASSERT EQUAL FAILED : overview 4x3, 0x0 slices of 0x0: T, H, W of token 12
+  expected: 5, 8, 9
+  actual  : 7, 7, 7
+ASSERT EQUAL FAILED : overview 4x3, 0x0 slices of 0x0: position of the text after the image
+  expected: 10
+  actual  : 8
+test_decoder_pos_minicpmv4_7 (13 of 182 assertion(s) failed)                    [FAIL]
+test_audio_preprocessor_conformer
+test_audio_preprocessor_conformer (6 assertion(s))                              [PASS]
+
+tests      : 4
+assertions : 217
+failures   : 13
+exceptions : 0
+skipped    : 0

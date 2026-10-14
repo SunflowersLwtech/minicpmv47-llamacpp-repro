@@ -1,0 +1,14 @@
+test_image_preprocessor_lfm2
+test_image_preprocessor_lfm2 (5 assertion(s))                                   [PASS]
+test_temporal_merge_grouping
+test_temporal_merge_grouping (24 assertion(s))                                  [PASS]
+test_decoder_pos_minicpmv4_7
+test_decoder_pos_minicpmv4_7 (182 assertion(s))                                 [PASS]
+test_audio_preprocessor_conformer
+test_audio_preprocessor_conformer (6 assertion(s))                              [PASS]
+
+tests      : 4
+assertions : 217
+failures   : 0
+exceptions : 0
+skipped    : 0

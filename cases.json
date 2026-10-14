@@ -1,0 +1,272 @@
+[
+ {
+  "id": "C1",
+  "image": "images/gui_settings.png",
+  "width": 1280,
+  "height": 800,
+  "answer_format": "point",
+  "prompt": "这是一张软件界面截图。请给出「保存」按钮的中心点坐标。坐标按整张图片的宽和高归一化到 0–1000 的整数。只输出一行，格式：(x, y)",
+  "target": "保存",
+  "gt_box_px": [
+   1100,
+   700,
+   1200,
+   738
+  ]
+ },
+ {
+  "id": "C2",
+  "image": "images/gui_settings.png",
+  "width": 1280,
+  "height": 800,
+  "answer_format": "point",
+  "prompt": "这是一张软件界面截图。请给出「清除缓存」按钮的中心点坐标。坐标按整张图片的宽和高归一化到 0–1000 的整数。只输出一行，格式：(x, y)",
+  "target": "清除缓存",
+  "gt_box_px": [
+   440,
+   440,
+   560,
+   478
+  ]
+ },
+ {
+  "id": "C3",
+  "image": "images/gui_settings.png",
+  "width": 1280,
+  "height": 800,
+  "answer_format": "point",
+  "prompt": "这是一张软件界面截图。请给出左侧导航栏中的「知识库」的中心点坐标。坐标按整张图片的宽和高归一化到 0–1000 的整数。只输出一行，格式：(x, y)",
+  "target": "sidebar/知识库",
+  "gt_box_px": [
+   72,
+   204,
+   248,
+   244
+  ]
+ },
+ {
+  "id": "C4",
+  "image": "images/gui_settings.png",
+  "width": 1280,
+  "height": 800,
+  "answer_format": "point",
+  "prompt": "这是一张软件界面截图。请给出「开机自启动」复选框的中心点坐标。坐标按整张图片的宽和高归一化到 0–1000 的整数。只输出一行，格式：(x, y)",
+  "target": "开机自启动",
+  "gt_box_px": [
+   296,
+   218,
+   420,
+   244
+  ]
+ },
+ {
+  "id": "C5",
+  "image": "images/gui_settings.png",
+  "width": 1280,
+  "height": 800,
+  "answer_format": "point",
+  "prompt": "这是一张软件界面截图。请给出「退出登录」按钮的中心点坐标。坐标按整张图片的宽和高归一化到 0–1000 的整数。只输出一行，格式：(x, y)",
+  "target": "退出登录",
+  "gt_box_px": [
+   300,
+   596,
+   420,
+   634
+  ]
+ },
+ {
+  "id": "H8",
+  "image": "images/toolbar_grid.png",
+  "width": 1600,
+  "height": 1000,
+  "answer_format": "point",
+  "prompt": "这是一张软件界面截图。请给出「替换」按钮的中心点坐标。坐标按整张图片的宽和高归一化到 0–1000 的整数。只输出一行，格式：(x, y)",
+  "target": "替换",
+  "gt_box_px": [
+   796,
+   396,
+   868,
+   494
+  ]
+ },
+ {
+  "id": "H9",
+  "image": "images/toolbar_grid.png",
+  "width": 1600,
+  "height": 1000,
+  "answer_format": "point",
+  "prompt": "这是一张软件界面截图。请给出「插入链接」按钮的中心点坐标。坐标按整张图片的宽和高归一化到 0–1000 的整数。只输出一行，格式：(x, y)",
+  "target": "插入链接",
+  "gt_box_px": [
+   456,
+   596,
+   528,
+   694
+  ]
+ },
+ {
+  "id": "H10",
+  "image": "images/toolbar_grid.png",
+  "width": 1600,
+  "height": 1000,
+  "answer_format": "point",
+  "prompt": "这是一张软件界面截图。请给出「字数统计」按钮的中心点坐标。坐标按整张图片的宽和高归一化到 0–1000 的整数。只输出一行，格式：(x, y)",
+  "target": "字数统计",
+  "gt_box_px": [
+   966,
+   596,
+   1038,
+   694
+  ]
+ },
+ {
+  "id": "H11",
+  "image": "images/toolbar_grid.png",
+  "width": 1600,
+  "height": 1000,
+  "answer_format": "point",
+  "prompt": "这是一张软件界面截图。请给出「另存为」按钮的中心点坐标。坐标按整张图片的宽和高归一化到 0–1000 的整数。只输出一行，格式：(x, y)",
+  "target": "另存为",
+  "gt_box_px": [
+   626,
+   196,
+   698,
+   294
+  ]
+ },
+ {
+  "id": "G1",
+  "image": "images/gui_settings.png",
+  "width": 1280,
+  "height": 800,
+  "answer_format": "bbox",
+  "prompt": "Please provide the bounding box coordinate of the region this sentence describes: <ref>「保存」按钮</ref>",
+  "target": "保存",
+  "gt_box_px": [
+   1100,
+   700,
+   1200,
+   738
+  ]
+ },
+ {
+  "id": "G2",
+  "image": "images/gui_settings.png",
+  "width": 1280,
+  "height": 800,
+  "answer_format": "bbox",
+  "prompt": "Please provide the bounding box coordinate of the region this sentence describes: <ref>「清除缓存」按钮</ref>",
+  "target": "清除缓存",
+  "gt_box_px": [
+   440,
+   440,
+   560,
+   478
+  ]
+ },
+ {
+  "id": "G3",
+  "image": "images/gui_settings.png",
+  "width": 1280,
+  "height": 800,
+  "answer_format": "bbox",
+  "prompt": "Please provide the bounding box coordinate of the region this sentence describes: <ref>左侧导航栏中的「知识库」</ref>",
+  "target": "sidebar/知识库",
+  "gt_box_px": [
+   72,
+   204,
+   248,
+   244
+  ]
+ },
+ {
+  "id": "G4",
+  "image": "images/gui_settings.png",
+  "width": 1280,
+  "height": 800,
+  "answer_format": "bbox",
+  "prompt": "Please provide the bounding box coordinate of the region this sentence describes: <ref>「开机自启动」复选框</ref>",
+  "target": "开机自启动",
+  "gt_box_px": [
+   296,
+   218,
+   420,
+   244
+  ]
+ },
+ {
+  "id": "G5",
+  "image": "images/gui_settings.png",
+  "width": 1280,
+  "height": 800,
+  "answer_format": "bbox",
+  "prompt": "Please provide the bounding box coordinate of the region this sentence describes: <ref>「退出登录」按钮</ref>",
+  "target": "退出登录",
+  "gt_box_px": [
+   300,
+   596,
+   420,
+   634
+  ]
+ },
+ {
+  "id": "G6",
+  "image": "images/toolbar_grid.png",
+  "width": 1600,
+  "height": 1000,
+  "answer_format": "bbox",
+  "prompt": "Please provide the bounding box coordinate of the region this sentence describes: <ref>「替换」按钮</ref>",
+  "target": "替换",
+  "gt_box_px": [
+   796,
+   396,
+   868,
+   494
+  ]
+ },
+ {
+  "id": "G7",
+  "image": "images/toolbar_grid.png",
+  "width": 1600,
+  "height": 1000,
+  "answer_format": "bbox",
+  "prompt": "Please provide the bounding box coordinate of the region this sentence describes: <ref>「插入链接」按钮</ref>",
+  "target": "插入链接",
+  "gt_box_px": [
+   456,
+   596,
+   528,
+   694
+  ]
+ },
+ {
+  "id": "G8",
+  "image": "images/toolbar_grid.png",
+  "width": 1600,
+  "height": 1000,
+  "answer_format": "bbox",
+  "prompt": "Please provide the bounding box coordinate of the region this sentence describes: <ref>「字数统计」按钮</ref>",
+  "target": "字数统计",
+  "gt_box_px": [
+   966,
+   596,
+   1038,
+   694
+  ]
+ },
+ {
+  "id": "G9",
+  "image": "images/toolbar_grid.png",
+  "width": 1600,
+  "height": 1000,
+  "answer_format": "bbox",
+  "prompt": "Please provide the bounding box coordinate of the region this sentence describes: <ref>「另存为」按钮</ref>",
+  "target": "另存为",
+  "gt_box_px": [
+   626,
+   196,
+   698,
+   294
+  ]
+ }
+]
